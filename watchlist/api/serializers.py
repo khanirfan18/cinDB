@@ -16,6 +16,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 
 class PlatformSerializer(serializers.ModelSerializer):
+    shows = serializers.StringRelatedField(many=True)
     class Meta:
         model = StreamPlatform
         fields = '__all__'
