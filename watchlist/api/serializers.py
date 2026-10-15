@@ -2,6 +2,7 @@ from rest_framework import serializers
 from watchlist.models import WatchList,Review,StreamPlatform
 
 class WatchListSerializer(serializers.ModelSerializer):
+    review = serializers.StringRelatedField(many=True)
     class Meta:
         model = WatchList
         fields = '__all__'
